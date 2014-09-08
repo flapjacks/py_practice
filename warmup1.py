@@ -133,14 +133,10 @@ def missing_char(str, n):
 #front_back('a') → 'a'
 #front_back('ab') → 'ba'
 
-def front_back(str):
-	if len(str) < 1:
-		return ''
-	str = list(str)
-	hold = str[0]
-	str[0] = str[-1]
-	str[-1] = hold
-	return ''.join(str)
+def front_back(string):
+	if len(string) <= 1:
+		return string
+	return string[-1] + string[1:-1] + string[0]
 
 # Front 3
 #
